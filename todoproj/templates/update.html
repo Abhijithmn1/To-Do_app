@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner ">
+                <div class="banner-text ">
+                    <h1 class="p-3 shadow"><b>To Do</b></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+  <div class="card-header">
+      <div class="card-title">
+          <h2>Task Update</h2>
+      </div>
+      <div class="card-body">
+           <form method="POST" class="p-3 shadow">
+              {% csrf_token %}
+              {{form.as_p}}
+              <br>
+              <input  type="submit">Confirm</input>
+            </form>
+      </div>
+  </div>
+</div>
+{% endblock %}

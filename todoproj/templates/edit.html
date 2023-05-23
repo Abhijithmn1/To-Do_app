@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner ">
+                <div class="banner-text ">
+                    <h1 class="p-3 shadow"><b>To Do</b></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+                <form method="POST" class="p-3 shadow">
+                  {% csrf_token %}
+                  {{fom.as_p}}
+                  <br>
+                  <button class="btn btn-primary btn-sm" type="submit">Confirm</button>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
